@@ -1,0 +1,481 @@
+div#jobs-form {
+    font-family: "Univers", "Arial", Helvetica, sans-serif;
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+
+    .principal {
+        height: 112px;
+        text-align: center;
+        border-bottom: 3px solid #E0E0E0;
+        line-height: 112px;
+        .main_title {
+            font-size: 40px;
+            font-style: italic;
+            color: #F8AE1B;
+            font-weight: 700;
+        }
+    }
+}
+
+// label.radio.input-error {
+//     background: red;
+// }
+.FormSelector {
+    margin-top: 20px;
+    .text {
+        max-width: 850px;
+        margin: 20px auto 0;
+        font-weight: 200;
+        color: #333;
+        text-align: center;
+        font-size: 17px;
+        p {
+            margin: 10px 0;
+            line-height: 25px;
+        }
+    }
+
+    ul.jobs-list {
+        text-align: center;
+        margin-top: 35px;
+        li {
+            display: inline-block;
+            margin: 0 35px;
+            width: 175px;
+            .icn_public {
+                width: 90px;
+                height: 65px;
+                margin: auto;
+                background: url(/arquivos/empleos_sprite.png);
+                &.Cajero {
+                    background-position: -90px 0;
+                }
+                &.Vendedor {
+                    background-position: -180px 0;
+                }
+                &.Cadete {
+                    background-position: -270px 0;
+                }
+            }
+
+            .jobs-list-button {
+                font-family: "Univers", "Arial", Helvetica, sans-serif;
+                height: 50px;
+                width: 175px;
+                background-color: #F8AE1B;
+                font-weight: 700;
+                text-align: center;
+                font-size: 18px;
+                line-height: 50px;
+                color: #FFF;
+                transition: all 300ms;
+                margin-top: 20px;
+                border: 0;
+                text-transform: uppercase;
+                &:hover {
+                    color: #F8AE1B;
+                    background: #333333
+                }
+            }
+        }
+    }
+
+    .requirements {
+        clear: both;
+        width: 100%;
+        margin: 60px auto 40px;
+        text-align: center;
+        p {
+            font-size: 16px;
+            color: #191919;
+            margin-top: 20px;
+            font-weight: 200;
+            span {
+                color: #ff9e00;
+                font-style: italic;
+                font-size: 20px;
+            }
+        }
+        .requirements-list {
+            font-size: 16px;
+            color: #191919;
+            margin-top: 20px;
+        }
+    }
+}
+
+.FormJobs {
+    width: 100%;
+
+
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 40px;
+    }
+    h3 {
+        text-align: center;
+        font-weight: 700;
+        padding-bottom: 30px;
+        font-size: 21px;
+        color: #F8AE1B;
+        margin-top: 40px;
+    }
+
+    .personal-data {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        border: 1px solid #F8AE1B;
+        padding: 15px;
+    }
+
+    p.label-title {
+        font-size: 14px;
+        color: #4f4f51;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .wrapper.previous-jobs-wrapper:first-child,
+    .container.languages .wrapper:first-child {
+        padding-right: 37px;
+    }
+
+    .index0 {
+        padding-right: 37px;
+        .delete-job,
+        .delete-language {
+            display: none!important;
+            cursor: initial!important;
+            opacity: 0;
+        }
+    }
+
+    .delete-job,
+    .delete-language {
+        width: 30px;
+        background: #f9ae1b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        border: 0;
+        &:hover {
+            background: black;
+            color: #f9ae1b;
+        }
+    }
+
+    .radio-wrapper {
+        p.errorMessage {
+            transition: all 0.6s;
+            opacity: 0;
+            font-size: 11px;
+            position: relative;
+            top: -25px;
+            font-style: italic;
+            color: red;
+            left: 3px;
+        }
+        &.input-error {
+            p.errorMessage {
+                transition: all 0.6s;
+                opacity: 1;
+            }
+        }
+    }
+
+    .previous-jobs-wrapper {
+        p.errorMessage {
+            transition: all 0.6s;
+            opacity: 0;
+            font-size: 11px;
+            position: relative;
+            top: 3px;
+            font-style: italic;
+            color: red;
+            left: 3px;
+        }
+
+        .input-error {
+            p.errorMessage {
+                transition: all 0.6s;
+                opacity: 1;
+            }
+
+            input,
+            textarea,
+            select {
+                border: 1px solid red;
+            }
+        }
+    }
+
+    label {
+        width: calc(30% - 30px);
+        margin-bottom: 30px;
+        position: relative;
+        .errorMessage {
+            transition: all 0.6s;
+            opacity: 0;
+            font-size: 11px;
+            position: relative;
+            top: 3px;
+            font-style: italic;
+            color: red;
+            left: 3px;
+        }
+        &.input-error {
+            input,
+            textarea,
+            select {
+                border: 1px solid red;
+            }
+            .errorMessage {
+                transition: all 0.6s;
+                opacity: 1;
+            }
+        }
+    }
+
+    input,
+    select {
+        width: 100%;
+        border: 1px solid #caccce;
+        background: #eaebec;
+        height: 25px;
+        outline: 0;
+        padding-left: 5px;
+        border-radius: 0;
+        color: black;
+        &:focus {
+            border: 1px solid #FCAF17;
+        }
+    }
+
+    .radio-container {
+        display: inline-flex;
+        justify-content: flex-start;
+        width: 100%;
+        label {
+            display: flex;
+            text-align: left;
+        }
+    }
+
+    p.radio-title {
+        padding-left: 10px;
+        font-size: 14px;
+        color: #4f4f51;
+    }
+    input[type=radio] {
+        border: 1px solid #caccce;
+        background: #eaebec;
+        height: 16px;
+        outline: 0;
+        padding-left: 5px;
+        width: 16px;
+    }
+    .prev-experience {
+        .left {
+            float: none;
+            width: 30%;
+        }
+
+        .right {
+            float: none;
+            width: calc(70% - 40px);
+            margin-left: 40px;
+        }
+
+        .container {
+            display: inline-flex;
+            width: calc(100% - 30px);
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border: 1px solid #F8AE1B;
+            padding: 15px;
+        }
+
+        textarea {
+            width: calc(100% - 40px);
+            border: 1px solid #caccce;
+            background: #eaebec;
+            height: 100px;
+            padding: 20px;
+            outline: 0;
+            &:focus {
+                border: 1px solid #FCAF17;
+            }
+        }
+
+        input.input-horariosEstudio {
+            width: 50%;
+        }
+
+        input.input-remuneracionPretendida {
+            width: 50%;
+        }
+    }
+    button#add-previus-job,
+    button#add-language,
+    button#form-jobs-button-send {
+        width: 115px;
+        color: #fff;
+        height: 42px;
+        background: #f8ae1b;
+        transition: all 300ms;
+        -webkit-transition: all 300ms;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+        line-height: 42px;
+        cursor: pointer;
+        border: 0;
+        &:hover {
+            background-color: #000;
+            color: #FCAF17;
+        }
+    }
+
+    p.datos-obligatorios {
+        float: left;
+        clear: both;
+        color: #7c7e80;
+        font-size: 11px;
+        font-style: italic;
+    }
+    button#form-jobs-button-send {
+        margin-right: 15px;
+        margin-bottom: 70px;
+        float: right;
+    }
+
+    .container.previous-jobs,
+    .container.languages {
+        flex-direction: column;
+        align-items: flex-end;
+        .wrapper {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    }
+
+    .label-foto {
+        width: 30%;
+
+        p.photo-name {
+            font-size: 11px;
+            font-style: italic;
+            color: #545454;
+        }
+
+        .errorMessage {
+            transition: all 0.6s;
+            opacity: 0;
+            font-size: 11px;
+            position: relative;
+            top: 3px;
+            font-style: italic;
+            color: red;
+            left: 3px;
+        }
+        &.input-error {
+            input,
+            textarea,
+            select {
+                border: 1px solid red;
+            }
+            .errorMessage {
+                transition: all 0.6s;
+                opacity: 1;
+            }
+        }
+
+
+        input#input-foto {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        input#input-foto+label {
+            font-weight: 700;
+            color: white;
+            background-color: #FCAF17;
+            display: inline-block;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 28px;
+            border: 0;
+            cursor: pointer;
+            margin-bottom: 3px;
+        }
+
+        input#input-foto:focus+label,
+        input#input-foto+label:hover {
+            background-color: black;
+            color: #FCAF17;
+        }
+
+        input#input-foto:focus+label {
+            outline: 1px dotted #000;
+            outline: -webkit-focus-ring-color auto 5px;
+        }
+
+        input#input-foto+label * {
+            pointer-events: none;
+        }
+    }
+}
+
+div#form_succes {
+    div#form_succes-text {
+        max-width: 850px;
+        margin: 50px auto;
+        font-weight: 200;
+        color: #333;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    div#botones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        a {
+            width: 115px;
+            color: #fff;
+            height: 42px;
+            background: #f8ae1b;
+            transition: all 300ms;
+            -webkit-transition: all 300ms;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+            border: 0;
+            margin: 0 auto;
+            &:hover {
+                background-color: #000;
+                color: #FCAF17;
+            }
+        }
+    }
+}
